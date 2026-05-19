@@ -12,7 +12,7 @@
 | # | Proyecto | Estado | Manual Técnico | Pendiente crítico |
 |---|---|---|---|---|
 | 1 | ProGesVen v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/docs/manual-tecnico.md) | Cutover dominio ventas.facore.cl → v2 |
-| 2 | facore-inventory v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/facore-inventory/v2/TECH.md) | Red Docker manual tras cada redeploy — conectar container a red PostgreSQL |
+| 2 | facore-inventory v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/facore-inventory/v2/TECH.md) | Cargar remanente PV-2025 y cambiar contraseña admin |
 
 ---
 
