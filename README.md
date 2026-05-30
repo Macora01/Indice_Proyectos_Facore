@@ -11,7 +11,7 @@
 
 | # | Proyecto | Estado | Manual Técnico | Pendiente crítico |
 |---|---|---|---|---|
-| 1 | ProGesVen v2 | 🟢 Estable | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/docs/manual-tecnico.md) | ✅ Completado (v1.02.05) |
+| 1 | ProGesVen v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/PROGESVEN.md) | Eliminar /admin/diagnostico + cutover dominio ventas.facore.cl |
 | 2 | facore-inventory v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/facore-inventory/v2/TECH.md) | Cargar remanente PV-2025 y cambiar contraseña admin |
 
 ---
@@ -28,4 +28,4 @@
 
 ---
 
-*Última actualización: 2026-05-27*
+*Última actualización: 2026-05-29*
