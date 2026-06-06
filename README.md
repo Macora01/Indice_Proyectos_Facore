@@ -13,6 +13,7 @@
 |---|---|---|---|---|
 | 1 | ProGesVen v2 | 🟢 Estable | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/PROGESVEN.md) | Eliminar /admin/diagnostico + cutover dominio ventas.facore.cl |
 | 2 | facore-inventory v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/facore-inventory/v2/TECH.md) | Cargar remanente PV-2025 y cambiar contraseña admin |
+| 3 | SII Extractor | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/sii-extractor/main/SII_EXTRACTOR.md) | CRUD usuarios/empresas + histórico 2021-2025 + actualización mensual |
 
 ---
 
@@ -28,4 +29,4 @@
 
 ---
 
-*Última actualización: 2026-05-30*
+*Última actualización: 2026-06-06*
