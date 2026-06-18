@@ -11,7 +11,7 @@
 
 | # | Proyecto | Estado | Manual Técnico | Pendiente crítico |
 |---|---|---|---|---|
-| 1 | ProGesVen v2 | 🟢 Estable | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/PROGESVEN.md) | Eliminar /admin/diagnostico + cutover dominio ventas.facore.cl |
+| 1 | ProGesVen v2 | 🟢 Estable | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/docs/manual-tecnico.md) | Recuperar ventas recientes si Hostinger restaura contenedor v1 |
 | 2 | facore-inventory v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/facore-inventory/v2/TECH.md) | Cargar remanente PV-2025 y cambiar contraseña admin |
 | 3 | SII Extractor | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/sii-extractor/main/SII_EXTRACTOR.md) | Actualización mensual automática (cron) |
 
@@ -29,4 +29,13 @@
 
 ---
 
-*Última actualización: 2026-06-08*
+## Notas ProGesVen v2 (2026-06-18)
+
+- BD PostgreSQL recreada en Coolify (host: `seyef4iwtgxtobwevyhfgvsp`)
+- Datos migrados: 188 productos, 19 ubicaciones, 107 ventas históricas, 11 bazares, 10 puntos de venta
+- Ventas recientes (posteriores a oct-2025) perdidas con contenedor v1 — pendiente consulta a Hostinger
+- Dominio `ventas.facore.cl` apunta a v2 ✅
+
+---
+
+*Última actualización: 2026-06-18*
