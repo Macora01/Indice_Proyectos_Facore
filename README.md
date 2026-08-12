@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | 1 | ProGesVen v2 | 🟢 Estable | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/docs/manual-tecnico.md) | Recuperar ventas recientes si Hostinger restaura contenedor v1 |
 | 2 | facore-inventory v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/facore-inventory/v2/TECH.md) | Cargar remanente PV-2025 y cambiar contraseña admin |
-| 3 | SII Extractor | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/sii-extractor/main/SII_EXTRACTOR.md) | Actualización mensual automática (cron) |
+| 3 | SII Extractor | 🟢 Estable | [ver](https://github.com/Macora01/sii-extractor/blob/main/SII_EXTRACTOR.md) (repo privado, requiere login) | Acceso restringido por usuario (una empresa por usuario) |
 
 ---
 
