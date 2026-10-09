@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | 1 | ProGesVen v2 | 🟢 Estable | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/docs/manual-tecnico.md) | Recuperar ventas recientes si Hostinger restaura contenedor v1 |
 | 2 | facore-inventory v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/facore-inventory/v2/TECH.md) | Cargar remanente PV-2025 y cambiar contraseña admin |
-| 3 | SII Extractor | 🟡 En curso | [ver](https://github.com/Macora01/sii-extractor/blob/main/SII_EXTRACTOR.md) (repo privado, requiere login) | Rotar credenciales expuestas en el historial de git (clave de la BD y API key) |
+| 3 | SII Extractor | 🟡 En curso | [ver](https://github.com/Macora01/sii-extractor/blob/main/SII_EXTRACTOR.md) (repo privado, requiere login) | Fase 3 del rediseño (usuarios en BD, Mi cuenta) y rotar credenciales expuestas en git |
 
 ---
 
@@ -47,7 +47,9 @@
 - Deploy del frontend (`e3t5e592xt26526v8gt3elnp`): manual en https://coolify.facore.cloud
 - Cron mensual del Mac (launchd, día 6) fallaba en silencio desde agosto: usaba `/usr/bin/python3` (3.9, sin Playwright). Corregido en v01.02.04: `run_mensual.sh` elige el primer Python que tenga Playwright. Agosto y septiembre 2026 de Boa Ideia cargados a mano
 - Prueba exitosa del extractor en el VPS: el SII acepta el ingreso desde el servidor (Chrome en contenedor `mcr.microsoft.com/playwright/python:v1.60.0-noble` + Xvfb). Base para un worker en Coolify que actualice datos desde la app sin depender del Mac
-- Plan de rediseño v02.01.01 presentado (Streamlit 1.65, interfaz sobria, usuarios en BD, worker de extracción): en revisión de Mario
+- **v02.01.01 publicada (2026-10-09):** interfaz rediseñada (Streamlit 1.65, tema sobrio, navegación nueva, Inicio/Consultas/Facturas), dependencias fijadas, y actualización de datos desde la app con un worker en el servidor (`sii-worker`, Coolify `ndti7fh34s5wr7xv4xpmdifp`) que además hace la mensual del día 6. Verificado con septiembre 2026 de Boa Ideia y María Cecilia
+- Seguridad: `/facturas/*` respondía sin API key; corregido y desplegado (v01.02.05). Coolify clona el repo privado con la GitHub App `gith-macora01` en las tres apps
+- Pendiente: fase 3 (Administración, Mi cuenta, usuarios en BD), rotar credenciales, alertas Discord del worker, desactivar el cron del Mac tras la mensual de noviembre
 
 ---
 
