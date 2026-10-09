@@ -45,6 +45,9 @@
 - Pin `pyarrow==25.0.1` en `frontend/requirements.txt`: `pyarrow 26.0.0` (publicado el 2026-10-09) rompía el login de `streamlit 1.35.0` al reconstruir la imagen. Las dependencias transitivas siguen sin fijar
 - La base PostgreSQL (`xe4yydacmt34t6t1sn4411z8`) estaba detenida en Coolify: la API daba 500 y el frontend mostraba "Error conectando a la API". Se inició de nuevo; el volumen de datos se había conservado. Causa de la detención: desconocida
 - Deploy del frontend (`e3t5e592xt26526v8gt3elnp`): manual en https://coolify.facore.cloud
+- Cron mensual del Mac (launchd, día 6) fallaba en silencio desde agosto: usaba `/usr/bin/python3` (3.9, sin Playwright). Corregido en v01.02.04: `run_mensual.sh` elige el primer Python que tenga Playwright. Agosto y septiembre 2026 de Boa Ideia cargados a mano
+- Prueba exitosa del extractor en el VPS: el SII acepta el ingreso desde el servidor (Chrome en contenedor `mcr.microsoft.com/playwright/python:v1.60.0-noble` + Xvfb). Base para un worker en Coolify que actualice datos desde la app sin depender del Mac
+- Plan de rediseño v02.01.01 presentado (Streamlit 1.65, interfaz sobria, usuarios en BD, worker de extracción): en revisión de Mario
 
 ---
 
