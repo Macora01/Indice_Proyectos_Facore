@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | 1 | ProGesVen v2 | 🟢 Estable | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/docs/manual-tecnico.md) | Recuperar ventas recientes si Hostinger restaura contenedor v1 |
 | 2 | facore-inventory v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/facore-inventory/v2/TECH.md) | Cargar remanente PV-2025 y cambiar contraseña admin |
-| 3 | SII Extractor | 🟡 En curso | [ver](https://github.com/Macora01/sii-extractor/blob/main/SII_EXTRACTOR.md) (repo privado, requiere login) | Rotar credenciales expuestas en git (clave de la BD y API key) |
+| 3 | SII Extractor | 🟡 En curso | [ver](https://github.com/Macora01/sii-extractor/blob/main/SII_EXTRACTOR.md) (repo privado, requiere login) | Alertas Discord del worker; apagar el cron del Mac tras la mensual de noviembre; validar monetización con pilotos |
 
 ---
 
@@ -50,8 +50,10 @@
 - **v02.01.01 publicada (2026-10-09):** interfaz rediseñada (Streamlit 1.65, tema sobrio, navegación nueva, Inicio/Consultas/Facturas), dependencias fijadas, y actualización de datos desde la app con un worker en el servidor (`sii-worker`, Coolify `ndti7fh34s5wr7xv4xpmdifp`) que además hace la mensual del día 6. Verificado con septiembre 2026 de Boa Ideia y María Cecilia
 - Seguridad: `/facturas/*` respondía sin API key; corregido y desplegado (v01.02.05). Coolify clona el repo privado con la GitHub App `gith-macora01` en las tres apps
 - **v02.02.01 publicada (2026-10-09):** fase 3 — usuarios en la base de datos (migrados con sus mismas claves), Mi cuenta (cada uno cambia su contraseña) y Administración rediseñada. Llave de la cookie rotada (COOKIE_KEY en Coolify). La API filtra el período con año y mes juntos
-- Pendiente: rotar clave de la BD y API key, quitar credenciales del YAML, alertas Discord del worker, desactivar el cron del Mac tras la mensual de noviembre
+- **v02.02.02 publicada (2026-10-10):** API_KEY y clave de PostgreSQL rotadas (`ops/rotar_llaves.py`, lo corre Mario), sin secretos en el código, `auth_config.yaml` eliminado, errores 500 sin traceback. Verificado: llave vieja 401, API y base ok
+- Análisis de monetización (ver manual): multiusuario en una sola instancia, VPS aparte para clientes de pago, validar con 3–5 pilotos antes de construir
+- Pendiente: alertas Discord del worker (necesita el webhook), desactivar el cron del Mac tras la mensual de noviembre, borrar el respaldo `~/.sii_rotacion_respaldo.json`
 
 ---
 
-*Última actualización: 2026-10-09*
+*Última actualización: 2026-10-10*
