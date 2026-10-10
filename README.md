@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | 1 | ProGesVen v2 | 🟢 Estable | [ver](https://raw.githubusercontent.com/Macora01/ProGesVen/v2/docs/manual-tecnico.md) | Recuperar ventas recientes si Hostinger restaura contenedor v1 |
 | 2 | facore-inventory v2 | 🟡 En curso | [ver](https://raw.githubusercontent.com/Macora01/facore-inventory/v2/TECH.md) | Cargar remanente PV-2025 y cambiar contraseña admin |
-| 3 | SII Extractor | 🟡 En curso | [ver](https://github.com/Macora01/sii-extractor/blob/main/SII_EXTRACTOR.md) (repo privado, requiere login) | Fase 3 del rediseño (usuarios en BD, Mi cuenta) y rotar credenciales expuestas en git |
+| 3 | SII Extractor | 🟡 En curso | [ver](https://github.com/Macora01/sii-extractor/blob/main/SII_EXTRACTOR.md) (repo privado, requiere login) | Rotar credenciales expuestas en git (clave de la BD y API key) |
 
 ---
 
@@ -49,7 +49,8 @@
 - Prueba exitosa del extractor en el VPS: el SII acepta el ingreso desde el servidor (Chrome en contenedor `mcr.microsoft.com/playwright/python:v1.60.0-noble` + Xvfb). Base para un worker en Coolify que actualice datos desde la app sin depender del Mac
 - **v02.01.01 publicada (2026-10-09):** interfaz rediseñada (Streamlit 1.65, tema sobrio, navegación nueva, Inicio/Consultas/Facturas), dependencias fijadas, y actualización de datos desde la app con un worker en el servidor (`sii-worker`, Coolify `ndti7fh34s5wr7xv4xpmdifp`) que además hace la mensual del día 6. Verificado con septiembre 2026 de Boa Ideia y María Cecilia
 - Seguridad: `/facturas/*` respondía sin API key; corregido y desplegado (v01.02.05). Coolify clona el repo privado con la GitHub App `gith-macora01` en las tres apps
-- Pendiente: fase 3 (Administración, Mi cuenta, usuarios en BD), rotar credenciales, alertas Discord del worker, desactivar el cron del Mac tras la mensual de noviembre
+- **v02.02.01 publicada (2026-10-09):** fase 3 — usuarios en la base de datos (migrados con sus mismas claves), Mi cuenta (cada uno cambia su contraseña) y Administración rediseñada. Llave de la cookie rotada (COOKIE_KEY en Coolify). La API filtra el período con año y mes juntos
+- Pendiente: rotar clave de la BD y API key, quitar credenciales del YAML, alertas Discord del worker, desactivar el cron del Mac tras la mensual de noviembre
 
 ---
 
