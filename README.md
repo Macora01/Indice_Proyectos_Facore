@@ -52,7 +52,7 @@
 - **v02.02.01 publicada (2026-10-09):** fase 3 — usuarios en la base de datos (migrados con sus mismas claves), Mi cuenta (cada uno cambia su contraseña) y Administración rediseñada. Llave de la cookie rotada (COOKIE_KEY en Coolify). La API filtra el período con año y mes juntos
 - **v02.02.02 publicada (2026-10-10):** API_KEY y clave de PostgreSQL rotadas (`ops/rotar_llaves.py`, lo corre Mario), sin secretos en el código, `auth_config.yaml` eliminado, errores 500 sin traceback. Verificado: llave vieja 401, API y base ok
 - Análisis de monetización (ver manual): multiusuario en una sola instancia, VPS aparte para clientes de pago, validar con 3–5 pilotos antes de construir
-- Pendiente: alertas Discord del worker (necesita el webhook), desactivar el cron del Mac tras la mensual de noviembre, borrar el respaldo `~/.sii_rotacion_respaldo.json`
+- Pendiente: alertas Discord del worker (necesita el webhook), desactivar el cron del Mac tras la mensual de noviembre
 
 ---
 
