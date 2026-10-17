@@ -29,12 +29,18 @@
 
 ---
 
-## Notas ProGesVen v2 (2026-06-18)
+## Notas ProGesVen v2 (2026-10-17)
 
 - BD PostgreSQL recreada en Coolify (host: `seyef4iwtgxtobwevyhfgvsp`)
 - Datos migrados: 188 productos, 19 ubicaciones, 107 ventas históricas, 11 bazares, 10 puntos de venta
 - Ventas recientes (posteriores a oct-2025) perdidas con contenedor v1 — pendiente consulta a Hostinger
 - Dominio `ventas.facore.cl` apunta a v2 ✅
+- **Skill `reporte-ventas-bi` publicada (2026-10-17, v01.03.04):** genera el informe de ventas en PDF (3 páginas, lenguaje simple) desde el xlsx de reporte de ventas (hojas Resumen, Por período, Detalle). Preparada para los 8 puntos de venta y el consolidado (probada solo con Pueblo del Inglés). Pie "Ventas SIGLA AAAA-MM-DD" y "Pág. N de M". Siglas: VLT (Vivo Los Trapenses), SDG (Santo Domingo), PDI (Pueblo del Inglés), CDO (Concept Dominicos), CLI (Concept Linderos), CAL (Concept Aldea), CML (Concept Mil Estilos), CAM (Concept Campera); BI = consolidado
+- Dónde está: repo ProGesVen, rama `v2`, carpeta `.claude/skills/reporte-ventas-bi/` (SKILL.md, scripts/analizar.py, scripts/render_pdf.sh, plantilla/). Entró por los PR #1, #2 y #3, sin tocar la app. No requiere deploy: el deploy en Coolify es manual y la versión v01.03.04 solo se verá en el pie de la app cuando se despliegue
+- Cómo se usa: subir el xlsx y decir punto de venta y período. Las correcciones de costo se pasan con `--costo PREFIJO=VALOR`. En la app de escritorio de Claude se carga en Configuración, Skills, Agregar (zip); la app exige nombre en minúsculas con guiones y descripción sin signos `<` ni `>`
+- Datos del reporte a tener en cuenta: el costo queda fijado al momento de la venta (si se corrige en la BD, como pasó con `BI6561`, las ventas ya registradas conservan el valor anterior); un descuento por compra de varias prendas se registra completo en una sola línea
+- Origen del xlsx por confirmar: trae costo, margen y temporada (PV-2627), campos que ProGesVen no maneja (su `models.py` no tiene costos). Posible origen: facore-inventory; si es así, conviene mover la skill a ese repo
+- Pendiente: probar un informe real en la app de escritorio (el PDF necesita Chrome o Chromium; si no hay, la skill entrega el HTML para guardarlo como PDF) y confirmar el origen del xlsx
 
 ---
 
@@ -57,4 +63,4 @@
 
 ---
 
-*Última actualización: 2026-10-11*
+*Última actualización: 2026-10-17*
